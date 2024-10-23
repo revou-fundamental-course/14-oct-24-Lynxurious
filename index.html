@@ -4,16 +4,116 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My RevoU Bootcamp Page</title>
+    <title>Project RevoU Bootcamp</title>
 
     <!-- CSS -->
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
 
+<nav id="navbar">
+    <!-- Navigation Bar -->
+    <div id="logo"><img src="https://picsum.photos/50" alt="logo"></div>
+    <div id="navigasi">
+        <a class="navbar-button" id="#home-banner" href="">Home</a>
+        <a class="navbar-button" id="#profile" href="">Our Profile</a>
+        <a class="navbar-button" id="" href="">Porftolio</a>
+        <a class="navbar-button" id=#contact-us href="">Contact Us</a>
+    </div>
+</nav>
+
+<hr>
+
 <body>
-    <h1>Hello, this is the start of the page</h1>
+    <!-- Banner -->
+    <div id="home-banner">
+        <h3>Hi Desta Welcome to Our Website</h3>
+        <p>Ini adalah Project Website Bootcamp RevoU</p>
+        <!-- <div id="banner-img"><img src="https://picsum.photos/1000/800" alt=""></div> -->
+
+        <div>
+            <div class="banner-photo-1"></div>
+            <div class="banner-photo-2"></div>
+            <div class="banner-photo-3"></div>
+        </div>
+        <button type="button" onclick="nextSlide(-1)">Prev</button>
+        <button type="button" onclick="nextSlide(1)">Next</button>
+        
+    </div>
+
+    <!-- Profile -->
+    <div class="profile" id="profile">
+        <h3>Our Headquarters</h3>
+        <div class="profile-img" id="profile-img">
+            <div id="hq1"><img src="https://picsum.photos/100" alt="">Jakarta</div>
+            <div id="hq2"><img src="https://picsum.photos/100" alt="">Bandung</div>
+            <div id="hq3"><img src="https://picsum.photos/100" alt="">Surabaya</div>
+        </div>
+    </div>
+
+    <!-- Porftolio -->
+    <div id="porftolio">
+
+    </div>
+
+
+    <!-- Contact Us -->
+    <h3 style="text-align:center; padding-top: 10px; padding-bottom: 10px;">Message Us!</h3>
+    <div id="contact-us">
+        <div id="contact-input">
+            <div id="input-nama">
+                <label for="nama">Nama :</label>
+                <input type="text" name="nama" id="nama" placeholder="Nama" required></input>
+            </div>
+            <!-- <div id="input-tanggal">
+                <label for="tanggl">Tanggal Lahir &#58;</label>
+                <input type="date" name="tanggal" id="">
+            </div> -->
+
+            <div id="input-tanggal">
+                <label for="tanggal">Tanggal Lahir :</label>
+                <div>
+                    <input type="date" name="tanggal" id="tanggal" required>
+                </div>
+            </div>
+
+
+            <div id="input-gender">
+                <label for="gender">Jenis Kelamin :</label>
+                <div id="gender">
+                    <input type="radio" name="gender" id="laki">
+                    <label for="laki">Laki-Laki</label>
+                    <input type="radio" name="gender" id="perempuan">
+                    <label for="perempuan">Perempuan</label>
+                </div>
+            </div>
+            <div id="input-pesan">
+                <label for="pesan">Pesan :</label>
+                <input type="text" name="pesan" id="pesan" placeholder="Pesan" required>
+            </div>
+            <div id="submit-btn">
+                <button type="button" id="btn" onclick="validateForm()">Submit</button>
+            </div>
+        </div>
+
+
+        <div id="contact-output">
+            <output id="">
+                <textarea name="text-output" id="text-output" rows="6" cols="50" readonly></textarea>
+            </output>
+        </div>
+    </div>
+
+    <hr>
+
+    <footer>
+        <span>Created By <b>Desta Kawestara</b></span>
+    </footer>
+
+    <script src="javascript/script.js"></script>
 
 </body>
+
+
 
 </html>

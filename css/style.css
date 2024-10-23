@@ -1,0 +1,163 @@
+/******************/
+/***** Navbar *****/
+/******************/
+
+#logo img {
+    border-radius: 50%;
+}
+
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#navigasi {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-button {
+    text-decoration: none;
+    color: black;
+    border: 1px solid;
+    background-color: white;
+
+    /* border-bottom: 1px dashed rgba(256, 256, 256, .2); */
+}
+
+.navbar-button:hover {
+    background-color: lightblue;
+}
+
+
+/****************/
+/***** Home *****/
+/****************/
+
+#banner-img {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+}
+
+.banner-photo-1 {
+    background-image: url("https://picsum.photos/1000/800");
+}
+
+.banner-photo-2 {
+    background-image: url("https://picsum.photos/1000/800");
+}
+
+.banner-photo-3 {
+    background-image: url("https://picsum.photos/1000/800");
+}
+
+
+/*******************/
+/***** Profile *****/
+/*******************/
+
+.profile {
+    text-align: center;
+}
+
+.profile-img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.profile-img img {
+    border-radius: 50%;
+}
+
+#hq1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hq2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#hq3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/**********************/
+/***** Contact Us *****/
+/**********************/
+
+#contact-us {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px px;
+}
+
+/* #contact-input {
+    padding: 20px 100px;
+} */
+
+#input-nama {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#input-tanggal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#input-gender {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+#input-pesan {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch;
+}
+
+#submit-btn {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 0px;
+
+}
+
+#btn {
+    padding: 5px 100px;
+}
+
+
+/******************/
+/***** Footer *****/
+/******************/
+
+footer {
+    display: flex;
+    align-content: space-between;
+    justify-content: space-around;
+}
+
+
+
+
+@media only screen and (max-width:480) {}
