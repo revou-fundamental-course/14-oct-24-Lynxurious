@@ -70,6 +70,6 @@ function validateForm() {
 
 }
 
-setInterval(() == nextSlide(1), 2000);
+// setInterval(() == nextSlide(1), 2000);
 
 
