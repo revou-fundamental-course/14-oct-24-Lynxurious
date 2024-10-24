@@ -101,113 +101,98 @@
 
     <!-- Contact Us -->
     <h3 style="text-align: center; margin-top: 30px; margin-bottom: 20px;">Contact Us!</h3>
-    <div class="container-form" id="contact-us">
-        <!-- Tabel input -->
+
+    <div class="container-form contact-us-container" id="contact-us">
+        <!-- Contact user input -->
         <table style="margin-top: 20px; margin-bottom: 20px;">
-            <form name="userDetail" action="/" method="get" id="userInfo">
+            <form name="userForm" action="sendMessage" method="get" id="formInput">
                 <tr class="input-nama">
-                    <th>
-                        <label for="namaUser">Nama</label>
-                    </th>
                     <td>
-                        <div id="input-nama">
-                            <span><b>:</b></span> &nbsp;
-                            <input type="text" name="namaUser" id="nama" placeholder="Nama" required></input>
-                        </div>
+                        <label for="nama">Nama</label>
+                    </td>
+                    <td>
+                        <span><b>:</b></span> &nbsp;
+                        <input type="text" name="user-name" id="nama" placeholder="Nama" required>
                     </td>
                 </tr>
                 <tr class="input-email">
-                    <th>
-                        <label for="emailUser">Email</label>
-                    </th>
                     <td>
-                        <div id="input-email">
-                            <span><b>:</b></span> &nbsp;
-                            <input type="email" name="email" id="emailUser" placeholder="Email" required></input>
-                        </div>
+                        <label for="email">Email</label>
+                    </td>
+                    <td>
+                        <span><b>:</b></span> &nbsp;
+                        <input type="email" name="user-email" id="userEmail" placeholder="Email" required>
                     </td>
                 </tr>
                 <tr class="input-tanggal">
-                    <th>
-                        <label for="tanggalLahir">Tanggal</label>
-                    </th>
                     <td>
-                        <div id="input-tanggal">
-                            <div>
-                                <span><b>:</b></span> &nbsp;
-                                <input type="date" name="tanggalNow" id="tanggal" required>
-                            </div>
-                        </div>
+                        <label for="tanggalLahir">Tanggal</label>
+                    </td>
+                    <td>
+                        <span><b>:</b></span> &nbsp;
+                        <input type="date" name="user-tanggal" id="tanggal" required>
                     </td>
                 </tr>
                 <tr class="input-gender">
-                    <th>
-                        <label for="gender">Jenis Kelamin</label>
-                    </th>
                     <td>
-                        <!-- <div id="input-gender">
-                            <span><b>:</b></span> &nbsp;
-                            <select id="gender" required>
-                                <option name="gender" value="none"></option>
-                                <option name="gender" value="Laki-Laki">Laki-Laki</option>
-                                <option name="gender" value="Perempuan">Perempuan</option>
-                            </select>
-                        </div> -->
+                        <label for="">Jenis Kelamin</label>
+                    </td>
+                    <td>
                         <span><b>:</b></span> &nbsp;
-                        <input type="radio" name="gender" id="laki" value="Laki-Laki">
+                        <input type="radio" name="jenisGender" id="laki" value="Laki-Laki" required>
                         <label for="laki">Laki-Laki</label>
-                        <input type="radio" name="gender" id="perempuan" value="Perempuan">
+                        <input type="radio" name="jenisGender" id="perempuan" value="Perempuan" required>
                         <label for="perempuan">Perempuan</label>
                     </td>
                 </tr>
                 <tr class="input-pesan">
-                    <th>
-                        <label for="pesanUser">Pesan</label>
-                    </th>
                     <td>
-                        <div id="input-pesan">
-                            <span><b>:</b></span> &nbsp
-                            <input type="text" name="pesanUser" id="pesan" placeholder="Pesan" required>
-                        </div>
+                        <label for="pesan">Pesan</label>
+                    </td>
+                    <td id="input-pesan">
+                        <span><b>:</b></span> &nbsp;
+                        <textarea name="user-pesan" id="pesan" placeholder="Pesan" required></textarea>
                     </td>
                 </tr>
                 <tr class="input-button">
-                    <th>
-                        <div id="submit-btn">
-                            <button type="submit" id="btn">Submit</button>
-                        </div>
-                    </th>
+                    <td id="submit-btn">
+                        <button id="btn" type="submit">Submit</button>
+                    </td>
                 </tr>
             </form>
         </table>
-        <!-- Tabel output -->
+        <!-- Contact output -->
         <div class="output-text">
             <table>
                 <tr>
                     <th>
-                        Current Time <span id="nowTime"></span>
+                        Current Time
+                    </th>
+                    <td>
+                        <p>
+                            <b>:</b>
+                            <span id="nowDate"></span>
+                            <span id="nowMonth"></span>
+                            <span id="nowYear"></span>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Nama</p>
                     </th>
                     <td>
                         <b>:</b>
-                        <span id="nowDate"></span>
-                        <span id="nowMonth"></span>
-                        <span id="nowYear"></span>
+                        <span id="namaUser"></span>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <p>Nama </p>
+                        <p>Email</p>
                     </th>
                     <td>
-                        <b>:</b><span id="nama"></span>
-                    </td>
-                </tr>
-                <tr>
-                    <th>
-                        <p>Email </p>
-                    </th>
-                    <td>
-                        <b>:</b><span id="email"></span>
+                        <b>:</b>
+                        <span id="emailUser"></span>
                     </td>
                 </tr>
                 <tr>
@@ -215,26 +200,30 @@
                         <p>Tanggal</p>
                     </th>
                     <td>
-                        <b>:</b><span id="tanggal"></span>
+                        <b>:</b>
+                        <span id="tanggalUser"></span>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <p>Jenis Kelamin </p>
+                        <p>Jenis Kelamin</p>
                     </th>
                     <td>
-                        <b>:</b><span id="jenisGender"></span>
+                        <b>:</b>
+                        <span id="userGender"></span>
                     </td>
                 </tr>
                 <tr>
                     <th>
-                        <p>Pesan </p>
+                        Pesan
                     </th>
                     <td>
-                        <b>:</b><span id="pesan"></span>
+                        <b>:</b>
+                        <span id="pesanUser"></span>
                     </td>
                 </tr>
             </table>
+
         </div>
     </div>
 
