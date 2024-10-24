@@ -49,7 +49,7 @@ form.addEventListener("submit", (empty)=>{
 
     var genderUsers = document.getElementsByName("jenisGender");
     
-    for (let i = 0; i <= gender.length; i++) {
+    for (let i = 0; i <= genderUsers.length; i++) {Des
         if(genderUsers[i].checked){
             document.getElementById("userGender").innerHTML = genderUsers[i].value;
         }
