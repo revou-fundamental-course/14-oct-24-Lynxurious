@@ -7,7 +7,7 @@
     <title>Project RevoU Bootcamp</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="css/style.css">
 
 </head>
 
@@ -32,14 +32,16 @@
         <!-- <div id="banner-img"><img src="https://picsum.photos/1000/800" alt=""></div> -->
 
         <div>
-            <div class="banner-photo-1"></div>
-            <div class="banner-photo-2"></div>
-            <div class="banner-photo-3"></div>
+            <div class="banner photo-1" id="n"><img src="https://picsum.photos/1000/800" id="" alt=""></div>
+            <div class="banner photo-2" id="n"><img src="https://picsum.photos/1000/800" id="" alt=""></div>
+            <div class="banner photo-3" id="n"><img src="https://picsum.photos/1000/800" id="" alt=""></div>
         </div>
         <button type="button" onclick="nextSlide(-1)">Prev</button>
         <button type="button" onclick="nextSlide(1)">Next</button>
-        
+
     </div>
+
+    <hr>
 
     <!-- Profile -->
     <div class="profile" id="profile">
@@ -51,32 +53,31 @@
         </div>
     </div>
 
+    <hr>
+
     <!-- Porftolio -->
     <div id="porftolio">
-
+        <p style="text-align: center; padding: 20px 0px ;">Hello ini portfolio kami</p>
     </div>
 
+    <hr>
 
     <!-- Contact Us -->
-    <h3 style="text-align:center; padding-top: 10px; padding-bottom: 10px;">Message Us!</h3>
-    <div id="contact-us">
+    <!-- <h3 style="text-align:center; padding-top: 10px; padding-bottom: 10px;">Message Us!</h3> -->
+    <!-- <div id="contact-us">
         <div id="contact-input">
+            
             <div id="input-nama">
                 <label for="nama">Nama :</label>
                 <input type="text" name="nama" id="nama" placeholder="Nama" required></input>
             </div>
-            <!-- <div id="input-tanggal">
-                <label for="tanggl">Tanggal Lahir &#58;</label>
-                <input type="date" name="tanggal" id="">
-            </div> -->
-
+            
             <div id="input-tanggal">
                 <label for="tanggal">Tanggal Lahir :</label>
                 <div>
                     <input type="date" name="tanggal" id="tanggal" required>
                 </div>
             </div>
-
 
             <div id="input-gender">
                 <label for="gender">Jenis Kelamin :</label>
@@ -87,21 +88,100 @@
                     <label for="perempuan">Perempuan</label>
                 </div>
             </div>
+            
+            <div id="input-gender">
+                <label for="gender">Jenis Kelamin :</label>
+                <select name="gender" id="gender" required>
+                    <option value="none"></option>
+                    <option value="laki">Laki-Laki</option>
+                    <option value="perempuan">Perempuan</option>
+                </select>
+            </div>
+            
             <div id="input-pesan">
                 <label for="pesan">Pesan :</label>
                 <input type="text" name="pesan" id="pesan" placeholder="Pesan" required>
             </div>
+            
             <div id="submit-btn">
                 <button type="button" id="btn" onclick="validateForm()">Submit</button>
             </div>
         </div>
-
-
+        
         <div id="contact-output">
             <output id="">
                 <textarea name="text-output" id="text-output" rows="6" cols="50" readonly></textarea>
             </output>
         </div>
+    </div> -->
+
+    <div class="container-form">
+        <table style="margin-top: 20px; margin-bottom: 20px;">
+            <tr class="input-nama">
+                <th>
+                    <label for="nama">Nama</label>
+                </th>
+                <td>
+                    <div id="input-nama">
+                        <span><b>:</b></span> &nbsp;
+                        <input type="text" name="nama" id="nama" placeholder="Nama" required></input>
+                    </div>
+                </td>
+            </tr>
+            <tr class="input-tanggal">
+                <th>
+                    <label for="tanggal">Tanggal Lahir</label>
+                </th>
+                <td>
+                    <div id="input-tanggal">
+                        <div>
+                            <span><b>:</b></span> &nbsp;
+                            <input type="date" name="tanggal" id="tanggal" required>
+                        </div>
+                    </div>
+                </td>
+            </tr>
+            <tr class="input-gender">
+                <th>
+                    <label for="gender">Jenis Kelamin</label>
+                </th>
+                <td>
+                    <div id="input-gender">
+                        <span><b>:</b></span> &nbsp;
+                        <select name="gender" id="gender" required>
+                            <option value="none"></option>
+                            <option value="Laki-Laki">Laki-Laki</option>
+                            <option value="Perempuan">Perempuan</option>
+                        </select>
+                    </div>
+                </td>
+            </tr>
+            <tr class="input-pesan">
+                <th>
+                    <label for="pesan">Pesan</label>
+                </th>
+                <td>
+                    <div id="input-pesan">
+                        <span><b>:</b></span> &nbsp
+                        <input type="text" name="pesan" id="pesan" placeholder="Pesan" required>
+                    </div>
+                </td>
+            </tr>
+            <tr class="input-button">
+                <th>
+                    <div id="submit-btn">
+                        <button type="button" id="btn" onclick="validateForm()">Submit</button>
+                    </div>
+                </th>
+            </tr>
+        </table>
+        <table style="margin-top: 20px; margin-bottom: 20px;">
+            <tr>
+                <td>
+                    <textarea name="text-output" id="text-output" rows="6" cols="50" readonly></textarea>
+                </td>
+            </tr>
+        </table>
     </div>
 
     <hr>

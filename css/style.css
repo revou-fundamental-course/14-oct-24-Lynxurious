@@ -35,14 +35,14 @@
 /***** Home *****/
 /****************/
 
-#banner-img {
+/* #banner-img {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     align-content: stretch;
-}
+} */
 
-.banner-photo-1 {
+/* .banner-photo-1 {
     background-image: url("https://picsum.photos/1000/800");
 }
 
@@ -52,7 +52,7 @@
 
 .banner-photo-3 {
     background-image: url("https://picsum.photos/1000/800");
-}
+} */
 
 
 /*******************/
@@ -95,17 +95,13 @@
 /***** Contact Us *****/
 /**********************/
 
-#contact-us {
+/* #contact-us {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
     margin: 50px px;
 }
-
-/* #contact-input {
-    padding: 20px 100px;
-} */
 
 #input-nama {
     display: flex;
@@ -144,7 +140,38 @@
 
 #btn {
     padding: 5px 100px;
+} */
+
+.container-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
+
+.container-form th {
+    text-align: start;
+    font-weight: 500;
+}
+
+.input-button {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.input-button button {
+    background-color: lightsteelblue;
+    color:white;
+    font-weight: 600;
+    border-radius: 10px;
+    padding: 2px 18px;
+}
+
+.input-button button:hover {
+    background-color: lightskyblue;
+    transform: scale(1.1);
+}
+
 
 
 /******************/
