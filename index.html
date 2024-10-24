@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project RevoU Bootcamp</title>
 
+    <!-- icon -->
+    <link id="web-icon" rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -13,12 +16,12 @@
 
 <nav id="navbar">
     <!-- Navigation Bar -->
-    <div id="logo"><img src="https://picsum.photos/50" alt="logo"></div>
+    <div id="logo"><img src="assets/logo.png" alt="logo"></div>
     <div id="navigasi">
-        <a class="navbar-button" id="#home-banner" href="">Home</a>
-        <a class="navbar-button" id="#profile" href="">Our Profile</a>
-        <a class="navbar-button" id="" href="">Porftolio</a>
-        <a class="navbar-button" id=#contact-us href="">Contact Us</a>
+        <a class="navbar-button" id="nav-btn" href="#home-banner">Home</a>
+        <a class="navbar-button" id="nav-btn" href="#profile">Our Profile</a>
+        <a class="navbar-button" id="nav-btn" href="#portfolio">About Us</a>
+        <a class="navbar-button" id="nav-btn" href="#contact-us">Contact Us</a>
     </div>
 </nav>
 
@@ -27,18 +30,27 @@
 <body>
     <!-- Banner -->
     <div id="home-banner">
-        <h3>Hi Desta Welcome to Our Website</h3>
-        <p>Ini adalah Project Website Bootcamp RevoU</p>
-        <!-- <div id="banner-img"><img src="https://picsum.photos/1000/800" alt=""></div> -->
-
-        <div>
-            <div class="banner photo-1" id="n"><img src="https://picsum.photos/1000/800" id="" alt=""></div>
-            <div class="banner photo-2" id="n"><img src="https://picsum.photos/1000/800" id="" alt=""></div>
-            <div class="banner photo-3" id="n"><img src="https://picsum.photos/1000/800" id="" alt=""></div>
+        <h3>Hi <span id="visitor">Visitor</span> Welcome to Our Website!</h3>
+        <p>We are a renowed perfume brand in the country with many experiences in the fragrance world. <br>We aim to
+            make
+            the best perfume with an affordable price yet elegant smell.</p>
+        <div class="banner">
+            <div class="wrapper-container">
+                <div id="sliderImage" class="sliderImage">
+                    <div class="banner-photo-1" id="img1"><img src="assets/Banner1.png" alt=""></div>
+                </div>
+                <div id="sliderImage" class="sliderImage">
+                    <div class="banner-photo-2" id="img2"><img src="assets/Banner2.png" alt=""></div>
+                </div>
+                <div id="sliderImage" class="sliderImage">
+                    <div class="banner-photo-3" id="img3"><img src="assets/Banner3.png" alt=""></div>
+                </div>
+            </div>
+            <div id="slider-button">
+                <button type="button" class="slide-button prev" id="prevButton" onclick="plusSlides(-1)">Prev</button>
+                <button type="button" class="slide-button next" id="nextButton" onclick="plusSlides(1)">Next</button>
+            </div>
         </div>
-        <button type="button" onclick="nextSlide(-1)">Prev</button>
-        <button type="button" onclick="nextSlide(1)">Next</button>
-
     </div>
 
     <hr>
@@ -47,147 +59,189 @@
     <div class="profile" id="profile">
         <h3>Our Headquarters</h3>
         <div class="profile-img" id="profile-img">
-            <div id="hq1"><img src="https://picsum.photos/100" alt="">Jakarta</div>
-            <div id="hq2"><img src="https://picsum.photos/100" alt="">Bandung</div>
-            <div id="hq3"><img src="https://picsum.photos/100" alt="">Surabaya</div>
+            <div id="hq1"><img src="assets/office1.jpg" alt="">
+                <p>Jakarta</p>
+            </div>
+            <div id="hq2"><img src="assets/office2.jpg" alt="">
+                <p>Bandung</p>
+            </div>
+            <div id="hq3"><img src="assets/office3.jpg" alt="">
+                <p>Surabaya</p>
+            </div>
         </div>
     </div>
 
     <hr>
 
     <!-- Porftolio -->
-    <div id="porftolio">
-        <p style="text-align: center; padding: 20px 0px ;">Hello ini portfolio kami</p>
+    <div id="portfolio">
+        <h3>About Us</h3>
+        <div class="portfolio-image-container">
+            <img class="portfolio-img" id="pt-img" src="assets/Portfolio.png" alt="">
+        </div>
+        <div class="about-us">
+            <p>“<span>Make Scents</span>” is not just a perfume, but a journey in experiencing the essence of
+                personality
+                and lifestyle.
+                Every drop of our perfumes is carefully crafted, combining the highest quality ingredients to create a
+                harmony of scents that evoke the senses. With 12 unique perfume variants, Make Scents is for every
+                precious
+                moment and for every personal character.</p>
+        </div>
+        <div class="naration">
+            <p>“At <span>Make Scents</span>, we believe that perfume is a reflection of who you are. With 12 unique
+                variants, each
+                scent is a reflection of your mood, moment and character. From the sweet touch of flowers to the warmth
+                of exotic spices, we create fragrances that give everyone the opportunity to express themselves in the
+                most beautiful way through scents.”</p>
+        </div>
     </div>
 
     <hr>
 
     <!-- Contact Us -->
-    <!-- <h3 style="text-align:center; padding-top: 10px; padding-bottom: 10px;">Message Us!</h3> -->
-    <!-- <div id="contact-us">
-        <div id="contact-input">
-            
-            <div id="input-nama">
-                <label for="nama">Nama :</label>
-                <input type="text" name="nama" id="nama" placeholder="Nama" required></input>
-            </div>
-            
-            <div id="input-tanggal">
-                <label for="tanggal">Tanggal Lahir :</label>
-                <div>
-                    <input type="date" name="tanggal" id="tanggal" required>
-                </div>
-            </div>
-
-            <div id="input-gender">
-                <label for="gender">Jenis Kelamin :</label>
-                <div id="gender">
-                    <input type="radio" name="gender" id="laki">
-                    <label for="laki">Laki-Laki</label>
-                    <input type="radio" name="gender" id="perempuan">
-                    <label for="perempuan">Perempuan</label>
-                </div>
-            </div>
-            
-            <div id="input-gender">
-                <label for="gender">Jenis Kelamin :</label>
-                <select name="gender" id="gender" required>
-                    <option value="none"></option>
-                    <option value="laki">Laki-Laki</option>
-                    <option value="perempuan">Perempuan</option>
-                </select>
-            </div>
-            
-            <div id="input-pesan">
-                <label for="pesan">Pesan :</label>
-                <input type="text" name="pesan" id="pesan" placeholder="Pesan" required>
-            </div>
-            
-            <div id="submit-btn">
-                <button type="button" id="btn" onclick="validateForm()">Submit</button>
-            </div>
-        </div>
-        
-        <div id="contact-output">
-            <output id="">
-                <textarea name="text-output" id="text-output" rows="6" cols="50" readonly></textarea>
-            </output>
-        </div>
-    </div> -->
-
-    <div class="container-form">
+    <h3 style="text-align: center; margin-top: 30px; margin-bottom: 20px;">Contact Us!</h3>
+    <div class="container-form" id="contact-us">
+        <!-- Tabel input -->
         <table style="margin-top: 20px; margin-bottom: 20px;">
-            <tr class="input-nama">
-                <th>
-                    <label for="nama">Nama</label>
-                </th>
-                <td>
-                    <div id="input-nama">
-                        <span><b>:</b></span> &nbsp;
-                        <input type="text" name="nama" id="nama" placeholder="Nama" required></input>
-                    </div>
-                </td>
-            </tr>
-            <tr class="input-tanggal">
-                <th>
-                    <label for="tanggal">Tanggal Lahir</label>
-                </th>
-                <td>
-                    <div id="input-tanggal">
-                        <div>
+            <form name="userDetail" action="/" method="get" id="userInfo">
+                <tr class="input-nama">
+                    <th>
+                        <label for="namaUser">Nama</label>
+                    </th>
+                    <td>
+                        <div id="input-nama">
                             <span><b>:</b></span> &nbsp;
-                            <input type="date" name="tanggal" id="tanggal" required>
+                            <input type="text" name="namaUser" id="nama" placeholder="Nama" required></input>
                         </div>
-                    </div>
-                </td>
-            </tr>
-            <tr class="input-gender">
-                <th>
-                    <label for="gender">Jenis Kelamin</label>
-                </th>
-                <td>
-                    <div id="input-gender">
+                    </td>
+                </tr>
+                <tr class="input-email">
+                    <th>
+                        <label for="emailUser">Email</label>
+                    </th>
+                    <td>
+                        <div id="input-email">
+                            <span><b>:</b></span> &nbsp;
+                            <input type="email" name="email" id="emailUser" placeholder="Email" required></input>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="input-tanggal">
+                    <th>
+                        <label for="tanggalLahir">Tanggal</label>
+                    </th>
+                    <td>
+                        <div id="input-tanggal">
+                            <div>
+                                <span><b>:</b></span> &nbsp;
+                                <input type="date" name="tanggalNow" id="tanggal" required>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="input-gender">
+                    <th>
+                        <label for="gender">Jenis Kelamin</label>
+                    </th>
+                    <td>
+                        <!-- <div id="input-gender">
+                            <span><b>:</b></span> &nbsp;
+                            <select id="gender" required>
+                                <option name="gender" value="none"></option>
+                                <option name="gender" value="Laki-Laki">Laki-Laki</option>
+                                <option name="gender" value="Perempuan">Perempuan</option>
+                            </select>
+                        </div> -->
                         <span><b>:</b></span> &nbsp;
-                        <select name="gender" id="gender" required>
-                            <option value="none"></option>
-                            <option value="Laki-Laki">Laki-Laki</option>
-                            <option value="Perempuan">Perempuan</option>
-                        </select>
-                    </div>
-                </td>
-            </tr>
-            <tr class="input-pesan">
-                <th>
-                    <label for="pesan">Pesan</label>
-                </th>
-                <td>
-                    <div id="input-pesan">
-                        <span><b>:</b></span> &nbsp
-                        <input type="text" name="pesan" id="pesan" placeholder="Pesan" required>
-                    </div>
-                </td>
-            </tr>
-            <tr class="input-button">
-                <th>
-                    <div id="submit-btn">
-                        <button type="button" id="btn" onclick="validateForm()">Submit</button>
-                    </div>
-                </th>
-            </tr>
+                        <input type="radio" name="gender" id="laki" value="Laki-Laki">
+                        <label for="laki">Laki-Laki</label>
+                        <input type="radio" name="gender" id="perempuan" value="Perempuan">
+                        <label for="perempuan">Perempuan</label>
+                    </td>
+                </tr>
+                <tr class="input-pesan">
+                    <th>
+                        <label for="pesanUser">Pesan</label>
+                    </th>
+                    <td>
+                        <div id="input-pesan">
+                            <span><b>:</b></span> &nbsp
+                            <input type="text" name="pesanUser" id="pesan" placeholder="Pesan" required>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="input-button">
+                    <th>
+                        <div id="submit-btn">
+                            <button type="submit" id="btn">Submit</button>
+                        </div>
+                    </th>
+                </tr>
+            </form>
         </table>
-        <table style="margin-top: 20px; margin-bottom: 20px;">
-            <tr>
-                <td>
-                    <textarea name="text-output" id="text-output" rows="6" cols="50" readonly></textarea>
-                </td>
-            </tr>
-        </table>
+        <!-- Tabel output -->
+        <div class="output-text">
+            <table>
+                <tr>
+                    <th>
+                        Current Time <span id="nowTime"></span>
+                    </th>
+                    <td>
+                        <b>:</b>
+                        <span id="nowDate"></span>
+                        <span id="nowMonth"></span>
+                        <span id="nowYear"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Nama </p>
+                    </th>
+                    <td>
+                        <b>:</b><span id="nama"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Email </p>
+                    </th>
+                    <td>
+                        <b>:</b><span id="email"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Tanggal</p>
+                    </th>
+                    <td>
+                        <b>:</b><span id="tanggal"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Jenis Kelamin </p>
+                    </th>
+                    <td>
+                        <b>:</b><span id="jenisGender"></span>
+                    </td>
+                </tr>
+                <tr>
+                    <th>
+                        <p>Pesan </p>
+                    </th>
+                    <td>
+                        <b>:</b><span id="pesan"></span>
+                    </td>
+                </tr>
+            </table>
+        </div>
     </div>
 
     <hr>
 
     <footer>
-        <span>Created By <b>Desta Kawestara</b></span>
+        <span>Created By <b>Desta Kawestara</b> 2024</span>
     </footer>
 
     <script src="javascript/script.js"></script>

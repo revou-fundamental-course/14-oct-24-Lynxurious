@@ -1,76 +1,66 @@
+// Visitor name
+function visitorName(){
+    let replaceVisitor = prompt("Masukkan nama anda","");
+    document.getElementById("visitor").innerHTML = replaceVisitor;
+}
+visitorName();
+
 // Contact us validate form
+
 function validateForm() {
-    let inputUsername = document.getElementById('nama').value;
-    let inputTanggal = document.getElementById('tanggal').value;
-    let inputGender = document.getElementById('gender').value;
-    let inputPesan = document.getElementById('pesan').value;
+    let inputUsername = document.getElementById("nama").value;
+    let inputTanggal = document.getElementById("tanggal").value;
+    let inputGender = document.getElementByName("gender").value;
+    let inputPesan = document.getElementById("pesan").value;
+    let inputForm = document.getElementById("userInfo").value;
 
-    if (inputUsername == '') {
-        alert('Input Nama Kosong!');
-    }
-    else {
-        // document.getElementById('text-output').value = document.getElementById('nama').value;
-        console.log(inputUsername);
-    }
+    let waktu = new Date();
+    let time = waktu.getTimezoneOffset();
+    let day = waktu.getDate();
+    let month = waktu.getMonth();
+    let year = waktu.getFullYear();
 
-    if (inputTanggal == '') {
-        alert('Input Tanggal Kosong!');
-    }
-    else {
-        // document.getElementById('text-output').value = document.getElementById('tanggal').value;
-        console.log(inputTanggal);
-    }
+    // inputForm.addEventListener(document.getElementById('btn'), (def)=>{
+    inputForm.addEventListener("submit", (def) => {
+        def.preventDefault();
+        document.getElementById("nowTime").innerHTML = time;
+        document.getElementById("nowDate").innerHTML = day + " - ";
+        document.getElementById("nowMonth").innerHTML = month + " - ";
+        document.getElementById("nowYear").innerHTML = year;
+        document.getElementById("inputUsername").innerHTML = inputUsername.value;
+        document.getElementById("inputTanggal").innerHTML = inputTanggal.value;
+        document.getElementById("inputPesan").innerHTML = inputPesan.value;
 
-    if (inputGender == '') {
-        alert('Input Gender Kosong!');
-    }
-    else {
-        // document.getElementById('text-output').value = document.getElementById('gender').value;
-        console.log(inputGender);
-    }
+        var jenisKelamin = document.getElementsByName("gender");
 
-    if (inputPesan == '') {
-        alert('Input Pesan Kosong!');
-    }
-    else {
-        // document.getElementById('text-output').value = document.getElementById('pesan').value;
-        console.log(inputPesan);
-    }
+        for (let i = 0; i <= jenisKelamin.length; i++) {
+            if (gender[i].checked) {
+                document.getElementById("jenisGender").innerHTML = jenisKelamin[i].value;
+            }
+        }
 
-    // document.getElementById('text-output').value = document.getElementById('nama', 'tanggal', 'gender', 'pesan').value;
-    document.getElementById('text-output').value = print('nama', 'tanggal', 'gender', 'pesan').value;
 
+    })
 }
 
-// Auto/Manual Banner Slider
-let indexSlide = 0;
-nextSlide(1);
 
-function nextSlide(n) {
-    showSlide(indexSlide += n);
-}
-function showSlide() {
-    let listImage = document.getElementsByClassName("banner");
+// Banner Slider
+let slideIndex = 1;
+showSlides(slideIndex);
 
-    if (n > listImage.length - 1) {
-        indexSlide = 0;
-    }
-
-    if (n < 0) {
-        indexSlide = listImage.length - 1;
-    }
-
-    let index = 0;
-    while (index < listImage.length) {
-        listImage[index].getElementsByClassName.display = 'none';
-        index++;
-    }
-
-    listImage[indexSlide].getElementsByClassName.display = 'block';
-    console.log(listImage);
-    console.log(n);
+function plusSlides(n) {
+    showSlides(slideIndex += n);
 }
 
-// setInterval(() == nextSlide(1), 2000);
+function showSlides(n) {
+    let i;
+    let slides = document.getElementsByClassName("sliderImage");
 
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
 
+    slides[slideIndex - 1].style.display = "block";
+}
